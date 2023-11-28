@@ -10,7 +10,7 @@ const Budget = () => {
 
         // Check if the new budget is within limits
         if (updatedBudget < totalExpenses() || updatedBudget > 20000) {
-            alert('Budget must be at least the total spending and no more than 20,000.');
+            alert(`Budget must be at least the total spending and no more than ${currency}20,000`);
             return;
         }
 
