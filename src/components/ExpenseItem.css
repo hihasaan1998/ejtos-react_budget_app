@@ -1,0 +1,16 @@
+/* ExpenseItem.css */
+
+.increase-btn,
+.decrease-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #4caf50; /* Change the background color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.decrease-btn {
+    background-color: #f44336; /* Change the background color */
+}
