@@ -11,8 +11,8 @@ const AllocationForm = (props) => {
 
     const submitEvent = () => {
         if (cost > remaining) {
-            alert("The value cannot exceed remaining funds " + currency + remaining);
-            setCost("");
+            alert(`The value cannot exceed remaining funds ${currency}${remaining}`);
+            setCost('');
             return;
         }
 
@@ -20,7 +20,7 @@ const AllocationForm = (props) => {
             name: name,
             cost: parseInt(cost),
         };
-        if (action === "Reduce") {
+        if (action === 'Reduce') {
             dispatch({
                 type: 'RED_EXPENSE',
                 payload: expense,
@@ -34,7 +34,7 @@ const AllocationForm = (props) => {
     };
 
     return (
-        <div>
+        <div className="container">
             <div className='row'>
 
                 <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
@@ -69,6 +69,7 @@ const AllocationForm = (props) => {
                         value={cost}
                         onChange={(event) => setCost(event.target.value)}
                         className="form-control"
+                        style={{ backgroundColor: '#f0faff' }} // Light shade of blue background
                     />
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>

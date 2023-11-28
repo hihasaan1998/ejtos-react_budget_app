@@ -7,17 +7,19 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';             
 import AllocationForm from './components/AllocationForm';
 import CurrencySelector from './components/CurrencySelector';
-import './components/CurrencySelector.css';
+
+import './app.css';
+
 
 import { AppProvider } from './context/AppContext';
 
 const App = () => {
     return (
         <AppProvider>
-            <div className='container'>
+            <div className='container-fluid light-green-bg'>
                 <h1 className='mt-3 text-center'>Company's Budget Allocation</h1>
 
-                <div className='row mt-4'>
+                <div className='row mt-4 budgeting'>
                     <div className='col-md-6 col-lg-3'>
                         <Budget />
                     </div>
@@ -25,22 +27,22 @@ const App = () => {
                         <Remaining />
                     </div>
                     <div className='col-md-6 col-lg-3'>
-                        <CurrencySelector />
+                        <ExpenseTotal />
                     </div>
                     <div className='col-md-6 col-lg-3'>
-                        <ExpenseTotal />
+                        <CurrencySelector />
                     </div>
                 </div>
 
                 <h3 className='mt-5'>Allocation</h3>
-                <div className='row mt-3'>
+                <div className='row mt-3 allocation-section'>
                     <div className='col'>
                         <ExpenseList />
                     </div>
                 </div>
 
                 <h3 className='mt-5'>Change Allocation</h3>
-                <div className='row mt-3'>
+                <div className='row mt-3 Change-Allocation'>
                     <div className='col'>
                         <AllocationForm />
                     </div>

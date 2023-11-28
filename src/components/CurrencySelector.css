@@ -17,21 +17,18 @@ select {
     outline: none;
     cursor: pointer;
     transition: border-color 0.3s, background-color 0.3s;
+    background-color: #e0e4e0; /* Light blueish shade */
+    border: 1px solid #a0ffa5; /* Border color */
 }
-
-/* Adjust the color scheme */
-select {
-    background-color: #f0f5ff; /* Light blueish shade */
-    border: 1px solid #a0b8ff; /* Border color */
-}
+   
 
 /* Hover effect */
 select:hover {
-    background-color: #dfe8ff; /* Darker shade on hover */
-    border-color: #7f9cff; /* Change border color on hover */
+    background-color: #a0ffc6; /* Darker shade on hover */
+    border-color: #014e10; /* Change border color on hover */
 }
 
 /* Optional: Focus style */
 select:focus {
-    box-shadow: 0 0 3px 1px #a0b8ff; /* Example focus style */
+    box-shadow: 0 0 3px 1px #00ff2f; /* Example focus style */
 }
