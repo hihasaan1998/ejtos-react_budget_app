@@ -16,8 +16,8 @@ import { AppProvider } from './context/AppContext';
 const App = () => {
     return (
         <AppProvider>
-            <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
+            <div className='container-fluid light-green-bg'>
+                <h1 className='mt-3 text-center'>Company's Budget Allocation</h1>
                 <div className='row mt-3'>
                     <div className='col-sm'>
                         <Budget />

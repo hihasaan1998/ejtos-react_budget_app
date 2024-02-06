@@ -58,10 +58,6 @@ export const AppReducer = (state, action) => {
                       ...state,
                       expenses: updatedExpenses,
                     };
-
-
-
-
             case 'DELETE_EXPENSE':
             action.type = "DONE";
             state.expenses.map((currentExp)=> {

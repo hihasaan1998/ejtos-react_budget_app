@@ -5,12 +5,24 @@ const Budget = () => {
     const { budget, currency, expenses, dispatch } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
 
+    const totalExpenses = () => {
+        return expenses.reduce((total, item) => total + item.cost, 0);
+    };
+
     const handleBudgetChange = (event) => {
         let updatedBudget = parseInt(event.target.value);
 
-        // Check if the new budget is within limits
-        if (updatedBudget < totalExpenses() || updatedBudget > 20000) {
-            alert(`Budget must be at least the total spending and no more than ${currency}20,000`);
+        // Check if the new budget is a valid number and different from the current budget
+        if (isNaN(updatedBudget) || updatedBudget === newBudget || updatedBudget < 0 || updatedBudget > 20000) {
+            alert(`Budget must be a valid number, different from the current budget, at least zero, and no more than ${currency}20,000`);
+            return;
+        }
+
+        // Check if the new budget is greater than or equal to the total expenses
+        const totalExpenseValue = totalExpenses();
+
+        if (updatedBudget < totalExpenseValue) {
+            alert(`Budget must be greater than or equal to the total spending: ${currency}${totalExpenseValue}`);
             return;
         }
 
@@ -21,9 +33,7 @@ const Budget = () => {
         });
     };
 
-    const totalExpenses = () => {
-        return expenses.reduce((total, item) => total + item.cost, 0);
-    };
+    
 
 
     return (
