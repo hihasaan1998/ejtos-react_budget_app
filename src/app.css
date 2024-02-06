@@ -1,0 +1,31 @@
+/* styling  app.js */
+
+/* app.css */
+.light-green-bg {
+  background-color: rgba(212, 255, 219, 0.303); /* Replace with your desired light green color */
+}
+
+
+.budgeting{border: 2px solid #42b983; /* Example border color (light green) */
+  border-radius: 5px; /* Example border radius */
+  padding: 15px; /* Example padding */
+  background-color: #f0fff0; /* Example background color (light green shade) */
+}
+
+.allocation-section {
+  border: 2px solid #42b983; /* Example border color (light green) */
+  border-radius: 5px; /* Example border radius */
+  padding: 15px; /* Example padding */
+  background-color: #f0fff0; /* Example background color (light green shade) */
+}
+
+/*. {
+  background-color:rgb(0, 162, 255)
+} */
+
+.Change-Allocation {
+  border: 2px solid #42b983; /* Example border color (light green) */
+  border-radius: 5px; /* Example border radius */
+  padding: 15px; /* Example padding */
+  background-color: #f0fff0; /* Example background color (light green shade) */
+}
